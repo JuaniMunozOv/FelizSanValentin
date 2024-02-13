@@ -1977,6 +1977,19 @@ body {
   }
 }
 
+.icono-buzon {
+  position: fixed; /* Posicionamiento fijo respecto a la ventana del navegador */
+  right: 20px; /* A la derecha, con un margen de 20px */
+  bottom: 20px; /* En la parte inferior, con un margen de 20px */
+  z-index: 1000; /* Asegurarse de que el icono esté por encima de otros elementos */
+}
+
+/* Estilo opcional para el icono en sí, en caso de que necesites ajustar su tamaño */
+.icono-buzon svg {
+  width: 50px; /* Ancho del icono */
+  height: auto; /* Altura automática para mantener la proporción */
+}
+
 @keyframes love {
   50% {
     fill: rgb(253, 93, 19);
