@@ -1978,16 +1978,28 @@ body {
 }
 
 .icono-buzon {
-  position: fixed; /* Posicionamiento fijo respecto a la ventana del navegador */
-  right: 20px; /* A la derecha, con un margen de 20px */
-  bottom: 20px; /* En la parte inferior, con un margen de 20px */
-  z-index: 1000; /* Asegurarse de que el icono esté por encima de otros elementos */
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  z-index: 1000;
 }
 
-/* Estilo opcional para el icono en sí, en caso de que necesites ajustar su tamaño */
-.icono-buzon svg {
-  width: 50px; /* Ancho del icono */
-  height: auto; /* Altura automática para mantener la proporción */
+.icono-buzon a {
+  display: block; /* Hace que el enlace ocupe el espacio del SVG */
+  cursor: pointer; /* Cambia el cursor a una mano para indicar que es clickeable */
+}
+
+.icono-buzon svg.buzon {
+  fill: white; /* Cambia el color de relleno del buzón a blanco */
+}
+
+
+.icono-buzon svg.corazon {
+  position: absolute; /* Posiciona el corazón de forma absoluta para que se ubique encima del buzón */
+  top: -10px; /* Ajusta según sea necesario para colocar el corazón encima del buzón */
+  left: 50%; /* Centra el corazón horizontalmente respecto al buzón */
+  transform: translateX(-50%); /* Ajuste fino para centrar exactamente el corazón */
+  fill: red; /* Color del corazón */
 }
 
 @keyframes love {
